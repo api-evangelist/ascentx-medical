@@ -1,23 +1,62 @@
 aid: ascentx-medical
+
 name: AscentX Medical
-description: 'AscentX Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'AscentX Medical, Inc. is a regenerative medicine company focused on advanced soft tissue engineering and injectable autologous tissue therapies. The company aims to improve quality of life for aging populations by developing innovative regenerative treatments that restore tissue function and vitality. It offers technology services, contract manufacturing, and literature on its research and development efforts.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ascentx-medical/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Regenerative Medicine
+- Tissue Engineering
+- Healthcare
+- Biotechnology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/ascentx-medical-hosts.yml
+- type: Newsroom
+  url: https://ascentxmedical.com/news/
+- type: Login
+  url: https://ascentxmedical.com/login/
+- type: DomainSecurity
+  url: security/ascentx-medical-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://ascentxmedical.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or documentation host provides a machine-readable contract.
+  evidence:
+    - url: https://api.ascentxmedical.com/openapi.json
+      status: 404
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
